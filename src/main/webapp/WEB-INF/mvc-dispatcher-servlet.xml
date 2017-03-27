@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="ua.vde.springangular.mvc"/>
+    <context:component-scan base-package="springangular.rest.mvc"/>
 
     <mvc:annotation-driven/>
 
