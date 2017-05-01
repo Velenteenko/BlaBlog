@@ -8,9 +8,9 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import springangular.core.entry.Account;
-import springangular.core.entry.Blog;
-import springangular.core.entry.BlogEntry;
+import springangular.core.model.entity.Account;
+import springangular.core.model.entity.Blog;
+import springangular.core.model.entity.BlogEntry;
 import springangular.core.services.BlogService;
 import springangular.core.services.util.BlogList;
 import springangular.rest.mvc.controller.BlogController;
@@ -20,7 +20,6 @@ import java.util.List;
 
 import static org.hamcrest.Matchers.*;
 import static org.mockito.Matchers.any;
-import static org.mockito.Matchers.contains;
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
@@ -61,8 +60,8 @@ public class BlogControllerTest {
         blog1.setTitle("Title 2");
         blogs.add(blog1);
 
-        BlogList allBlogs = new BlogList();
-        allBlogs.setBlogs(blogs);
+        BlogList allBlogs = new BlogList(blogs);
+//        allBlogs.setBlogs(blogs);
 
         when(service.findAllBlogs()).thenReturn(allBlogs);
         mockMvc.perform(get("/rest/blogs"))
@@ -87,7 +86,7 @@ public class BlogControllerTest {
         mockMvc.perform(get("/rest/blogs/1"))
                 .andDo(print())
                 .andExpect(jsonPath("$.links[*].href", hasItems(endsWith("/blogs/1"))))
-                .andExpect(jsonPath("$.links[*].href", hasItem(endsWith("/blogs/1/entries"))))
+                .andExpect(jsonPath("$.links[*].href", hasItem(endsWith("/blogs/1/blog-entries"))))
                 .andExpect(jsonPath("$.links[*].href", hasItem(endsWith("/101"))))
                 .andExpect(jsonPath("$.links[*].rel", hasItems(is("self"), is("owner"), is("entries"))))
                 .andExpect(jsonPath("$.title", is("First blog")))

@@ -1,6 +1,5 @@
 package springangular.rest.exceptions;
 
-import com.sun.deploy.net.HttpResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 

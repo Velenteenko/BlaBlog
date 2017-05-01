@@ -1,7 +1,7 @@
 package springangular.rest.resources.asm;
 
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
-import springangular.core.entry.Blog;
+import springangular.core.model.entity.Blog;
 import springangular.rest.mvc.controller.AccountController;
 import springangular.rest.mvc.controller.BlogController;
 import springangular.rest.resources.BlogResource;
@@ -22,7 +22,7 @@ public class BlogResourceAsm extends ResourceAssemblerSupport<Blog, BlogResource
         BlogResource resource = new BlogResource();
         resource.setTitle(blog.getTitle());
         resource.add(linkTo(BlogController.class).slash(blog.getId()).withSelfRel());
-        resource.add(linkTo(BlogController.class).slash(blog.getId()).slash("entries").withRel("entries"));
+        resource.add(linkTo(BlogController.class).slash(blog.getId()).slash("blog-entries").withRel("entries"));
 
         if(blog.getOwner() != null) {
             resource.add(linkTo(AccountController.class).slash(blog.getOwner().getId()).withRel("owner"));

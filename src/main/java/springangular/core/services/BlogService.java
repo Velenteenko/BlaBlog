@@ -1,9 +1,9 @@
 package springangular.core.services;
 
-import springangular.core.entry.Blog;
-import springangular.core.entry.BlogEntry;
-import springangular.core.services.util.BlogList;
+import springangular.core.model.entity.Blog;
+import springangular.core.model.entity.BlogEntry;
 import springangular.core.services.util.BlogEntryList;
+import springangular.core.services.util.BlogList;
 
 /**
  * Created by E5520 on 19.03.2017.

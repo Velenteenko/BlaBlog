@@ -3,7 +3,7 @@ package springangular.rest.resources;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.hateoas.ResourceSupport;
-import springangular.core.entry.Account;
+import springangular.core.model.entity.Account;
 
 /**
  * Created by E5520 on 26.03.2017.

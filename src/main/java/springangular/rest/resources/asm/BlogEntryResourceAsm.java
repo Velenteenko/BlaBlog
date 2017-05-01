@@ -2,7 +2,7 @@ package springangular.rest.resources.asm;
 
 import org.springframework.hateoas.Link;
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
-import springangular.core.entry.BlogEntry;
+import springangular.core.model.entity.BlogEntry;
 import springangular.rest.mvc.controller.BlogController;
 import springangular.rest.mvc.controller.BlogEntryController;
 import springangular.rest.resources.BlogEntryResource;

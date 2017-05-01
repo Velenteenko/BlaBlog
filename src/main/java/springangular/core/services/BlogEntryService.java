@@ -1,6 +1,6 @@
 package springangular.core.services;
 
-import springangular.core.entry.BlogEntry;
+import springangular.core.model.entity.BlogEntry;
 
 /**
  * Created by E5520 on 19.03.2017.

@@ -1,7 +1,7 @@
 package springangular.rest.resources;
 
 import org.springframework.hateoas.ResourceSupport;
-import springangular.core.entry.Blog;
+import springangular.core.model.entity.Blog;
 
 /**
  * Created by E5520 on 26.03.2017.

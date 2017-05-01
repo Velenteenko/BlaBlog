@@ -1,5 +1,6 @@
 package springangular.rest.mvc.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -8,8 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springangular.core.entry.Blog;
-import springangular.core.entry.BlogEntry;
+import springangular.core.model.entity.Blog;
+import springangular.core.model.entity.BlogEntry;
 import springangular.core.services.BlogService;
 import springangular.core.services.exceptions.BlogNotFoundException;
 import springangular.core.services.util.BlogEntryList;
@@ -35,6 +36,7 @@ public class BlogController {
 
 private BlogService blogService;
 
+    @Autowired
     public BlogController(BlogService blogService) {
         this.blogService = blogService;
     }

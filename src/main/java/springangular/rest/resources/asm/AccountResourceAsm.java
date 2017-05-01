@@ -1,7 +1,7 @@
 package springangular.rest.resources.asm;
 
 import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
-import springangular.core.entry.Account;
+import springangular.core.model.entity.Account;
 import springangular.rest.mvc.controller.AccountController;
 import springangular.rest.resources.AccountResource;
 

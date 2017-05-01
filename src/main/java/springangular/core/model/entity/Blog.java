@@ -1,12 +1,21 @@
 package springangular.core.model.entity;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
 /**
  * Created by E5520 on 19.03.2017.
  */
+@Entity
 public class Blog {
 
+    @Id
+    @GeneratedValue
     private Long id;
     private String title;
+    @OneToOne
     private Account owner;
 
     public Long getId() {
