@@ -1,5 +1,6 @@
 package springangular.core.model.entity;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -7,6 +8,7 @@ import javax.persistence.ManyToOne;
 /**
  * Created by E5520 on 19.03.2017.
  */
+@Entity
 public class BlogEntry {
 
     @Id

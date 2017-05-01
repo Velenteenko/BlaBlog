@@ -10,8 +10,8 @@ import springangular.core.services.util.BlogList;
  */
 public interface AccountService {
 
-     Account findAccount(Long accountId);
-     Account createAccount(Account data);
+    Account findAccount(Long accountId);
+    Account createAccount(Account data);
     Blog createBlog(Long accountId, Blog data);
     BlogList findBlogsByAccount(Long accountId);
     AccountList findAllAccounts();

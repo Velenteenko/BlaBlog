@@ -13,6 +13,9 @@ import springangular.core.services.exceptions.AccountExistsException;
 import springangular.core.services.exceptions.BlogExistsException;
 import springangular.core.services.util.AccountList;
 import springangular.core.services.util.BlogList;
+import springangular.rest.mvc.controller.AccountController;
+import springangular.rest.mvc.controller.BlogController;
+import springangular.rest.mvc.controller.BlogEntryController;
 
 /**
  * Created by E5520 on 01.05.2017.
@@ -26,6 +29,7 @@ public class AccountServiceImpl implements AccountService {
 
     @Autowired
     private BlogRepository blogRepository;
+
 
     @Override
     public Account findAccount(Long accountId) {

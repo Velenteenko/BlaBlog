@@ -1,5 +1,6 @@
 package springangular.core.repositories.jpa;
 
+import org.springframework.stereotype.Repository;
 import springangular.core.model.entity.BlogEntry;
 import springangular.core.repositories.BlogEntryRepository;
 
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * Created by E5520 on 01.05.2017.
  */
+@Repository
 public class JpaBlogEntryRepository implements BlogEntryRepository {
 
     @PersistenceContext

@@ -2,7 +2,6 @@ package springangular.rest.mvc.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -22,8 +21,8 @@ import springangular.rest.resources.AccountListResource;
 import springangular.rest.resources.AccountResource;
 import springangular.rest.resources.BlogListResource;
 import springangular.rest.resources.BlogResource;
-import springangular.rest.resources.asm.AccountResourceAsm;
 import springangular.rest.resources.asm.AccountListResourceAsm;
+import springangular.rest.resources.asm.AccountResourceAsm;
 import springangular.rest.resources.asm.BlogListResourceAsm;
 import springangular.rest.resources.asm.BlogResourceAsm;
 
@@ -42,6 +41,7 @@ public class AccountController {
 
     @Autowired
     public AccountController(AccountService accountService) {
+        super();
         this.accountService = accountService;
     }
 
@@ -55,7 +55,7 @@ public class AccountController {
         else {
             Account account = accountService.findByAccountName(name);
             if (account == null) {
-                list = new AccountList(new ArrayList<>());
+                list = new AccountList(new ArrayList<Account>());
             }
             else {
                 list = new AccountList(Arrays.asList(account));

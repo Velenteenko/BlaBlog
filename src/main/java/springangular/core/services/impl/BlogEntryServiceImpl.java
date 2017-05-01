@@ -1,6 +1,8 @@
 package springangular.core.services.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import springangular.core.model.entity.BlogEntry;
 import springangular.core.repositories.BlogEntryRepository;
 import springangular.core.services.BlogEntryService;
@@ -8,6 +10,8 @@ import springangular.core.services.BlogEntryService;
 /**
  * Created by E5520 on 01.05.2017.
  */
+@Service
+@Transactional
 public class BlogEntryServiceImpl implements BlogEntryService {
 
     @Autowired

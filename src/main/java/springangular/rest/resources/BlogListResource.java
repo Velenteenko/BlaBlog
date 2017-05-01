@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class BlogListResource extends ResourceSupport {
 
-    private List<BlogResource> blogs = new ArrayList<>();
+    private List<BlogResource> blogs = new ArrayList<BlogResource>();
 
     public List<BlogResource> getBlogs() {
         return blogs;

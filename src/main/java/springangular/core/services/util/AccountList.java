@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class AccountList {
 
-    private List<Account> accountList = new ArrayList<>();
+    private List<Account> accountList = new ArrayList<Account>();
 
     public AccountList(List<Account> accountList) {
         this.accountList = accountList;

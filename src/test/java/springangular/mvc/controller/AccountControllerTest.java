@@ -144,7 +144,7 @@ public class AccountControllerTest {
 
     @Test
     public void findAccountsByName() throws Exception {
-        List<Account> accounts = new ArrayList<>();
+        List<Account> accounts = new ArrayList<Account>();
 
         Account accountA = new Account();
         accountA.setId(1L);

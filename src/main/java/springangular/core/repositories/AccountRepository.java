@@ -9,6 +9,7 @@ import java.util.List;
  * Created by E5520 on 27.03.2017.
  */
 public interface AccountRepository {
+
     List<Account> findAllAccounts();
     Account findAccount(Long accountId);
     Account findAccountByName(String usernameAccount);
