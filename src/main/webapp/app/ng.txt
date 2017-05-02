@@ -1,3 +1,0 @@
-ngBoilerplate
-Bower
-Grunt
