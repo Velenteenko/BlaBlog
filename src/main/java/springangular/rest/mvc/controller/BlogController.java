@@ -75,7 +75,7 @@ private BlogService blogService;
         }
     }
 
-    @RequestMapping(value="/{blogId}/blog-entries")
+    @RequestMapping(value="/{blogId}/blog-entries", method = RequestMethod.GET)
     public ResponseEntity<BlogEntryListResource> findAllBlogEntries(
             @PathVariable Long blogId)
     {

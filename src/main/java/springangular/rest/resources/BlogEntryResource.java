@@ -9,6 +9,15 @@ import springangular.core.model.entity.BlogEntry;
 public class BlogEntryResource extends ResourceSupport {
 
     private String title;
+    private String content;
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
 
     public String getTitle() {
         return title;
@@ -21,6 +30,7 @@ public class BlogEntryResource extends ResourceSupport {
     public BlogEntry toBlogEntry() {
         BlogEntry blogEntry = new BlogEntry();
         blogEntry.setTitle(title);
+        blogEntry.setContent(content);
         return blogEntry;
     }
 }

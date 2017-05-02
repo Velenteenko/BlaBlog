@@ -13,6 +13,9 @@
 
     <context:component-scan base-package="springangular.rest.mvc.controller"/>
 
+    <!--ngBoilerplate resources for UI-->
+    <mvc:resources mapping="/app/**" location="/app/build/" />
+    
     <mvc:annotation-driven/>
 
     <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
