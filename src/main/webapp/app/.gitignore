@@ -1,5 +1,4 @@
 *.sw*
 *~
 build/
-bin/
 node_modules/
